@@ -19,8 +19,9 @@ export default createGlobalStyle`
 
   body, input, button {
     font-size: 14px;
-    color: #222;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    /* font-family: monospace, sans-serif; */
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
   }
 
   button {
