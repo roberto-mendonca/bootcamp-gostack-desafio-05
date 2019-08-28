@@ -13,3 +13,5 @@
   - yarn add react-icons
 - requisicoes api com axios
   - yarn add axios
+- PropTypes
+  - yarn add prop-types

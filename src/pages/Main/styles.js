@@ -1,27 +1,5 @@
 import styled, { keyframes, css } from 'styled-components';
 
-export const Container = styled.div`
-  max-width: 700px;
-  background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
-  margin: 80px auto;
-
-  h1 {
-    font-size: 24px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
-    svg {
-      margin-right: 10px;
-      font-size: 40px;
-    }
-  }
-`;
-
 export const Form = styled.form`
   margin-top: 30px;
   display: flex;
@@ -29,14 +7,16 @@ export const Form = styled.form`
 
   input {
     flex: 1;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    border: 1px solid ${props => (props.error ? '#ff6b6b' : '#eee')};
     padding: 10px 15px;
+    border-radius: 4px;
     font-size: 16px;
-  }
 
-  input:focus {
-    border: 1px solid #7159c1;
+    transition: border 0.25s ease-in-out;
+
+    &:focus {
+      border: 1px solid #7159c1;
+    }
   }
 `;
 
@@ -44,6 +24,7 @@ const rotate = keyframes`
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -58,6 +39,7 @@ export const SubmitButton = styled.button.attrs(props => ({
   padding: 0 15px;
   margin-left: 10px;
   border-radius: 4px;
+
   display: flex;
   justify-content: center;
   align-items: center;
